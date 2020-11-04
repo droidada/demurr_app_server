@@ -1,0 +1,1 @@
+export const secret = 'demurrage-app-secret-key';
