@@ -3,7 +3,7 @@ import { mongoose } from '../models';
 
 dotenv.config();
 
-const connectionString = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}`;
+const connectionString = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB}?retryWrites=true&w=majority`;
 export const connectDb = () => {
     mongoose
     .connect(connectionString, {
